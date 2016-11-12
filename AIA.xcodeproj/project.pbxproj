@@ -12,6 +12,7 @@
 		EB2A55E51DD6DAD200C7FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2A55E41DD6DAD200C7FBE6 /* Assets.xcassets */; };
 		EB2A55E81DD6DAD200C7FBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2A55E61DD6DAD200C7FBE6 /* LaunchScreen.storyboard */; };
 		EB2A55F01DD6DE7100C7FBE6 /* TellUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A55EF1DD6DE7100C7FBE6 /* TellUsViewController.swift */; };
+		EB2A55F31DD6E6D400C7FBE6 /* AIASans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB2A55F21DD6E6D400C7FBE6 /* AIASans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EB2A55E71DD6DAD200C7FBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB2A55E91DD6DAD200C7FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB2A55EF1DD6DE7100C7FBE6 /* TellUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellUsViewController.swift; sourceTree = "<group>"; };
+		EB2A55F21DD6E6D400C7FBE6 /* AIASans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AIASans.ttf; path = ../../../Downloads/iOS_UI_Test/assets/AIASans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				EB2A55F11DD6DE8200C7FBE6 /* Bundle */,
-				EB2A55EF1DD6DE7100C7FBE6 /* TellUsViewController.swift */,
 				EB2A55E11DD6DAD200C7FBE6 /* Main.storyboard */,
+				EB2A55EF1DD6DE7100C7FBE6 /* TellUsViewController.swift */,
+				EB2A55F21DD6E6D400C7FBE6 /* AIASans.ttf */,
 			);
 			path = AIA;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 				EB2A55E81DD6DAD200C7FBE6 /* LaunchScreen.storyboard in Resources */,
 				EB2A55E51DD6DAD200C7FBE6 /* Assets.xcassets in Resources */,
 				EB2A55E31DD6DAD200C7FBE6 /* Main.storyboard in Resources */,
+				EB2A55F31DD6E6D400C7FBE6 /* AIASans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
