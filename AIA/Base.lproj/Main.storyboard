@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v7r-ha-DXM">
-    <device id="retina4_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,36 +24,182 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LamHa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhO-Cj-ixk" userLabel="TellUsLabel">
-                                <rect key="frame" x="32" y="129" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJp-6L-ePD" userLabel="ClearButton">
-                                <rect key="frame" x="168" y="120" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90335708856582642" green="0.3073602020740509" blue="0.34902274608612061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-5J-gIw">
-                                <rect key="frame" x="247" y="120" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90335708856582642" green="0.3073602020740509" blue="0.34902274608612061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E78-qe-SQb" userLabel="ViewNaVi">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dc-oq-r6F">
+                                        <rect key="frame" x="10" y="-10" width="80" height="80"/>
+                                        <state key="normal" image="icon_back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.081264711916446686" blue="0.33935263752937317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9Dc-oq-r6F" firstAttribute="centerY" secondItem="E78-qe-SQb" secondAttribute="centerY" id="Zfy-dq-Knc"/>
+                                    <constraint firstAttribute="height" constant="60" id="a9I-eI-QXP"/>
+                                    <constraint firstItem="9Dc-oq-r6F" firstAttribute="leading" secondItem="E78-qe-SQb" secondAttribute="leading" constant="10" id="uy8-bm-SWQ"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RCD-4U-cA1" userLabel="Stack ViewTellUs">
+                                <rect key="frame" x="5" y="70" width="1341" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="TELL US ABOUT YOU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhO-Cj-ixk" userLabel="TellUsLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="617" height="48"/>
+                                        <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJp-6L-ePD" userLabel="ClearButton">
+                                        <rect key="frame" x="637" y="0.0" width="342" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.081264711916446686" blue="0.33935263752937317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-5J-gIw">
+                                        <rect key="frame" x="999" y="0.0" width="342" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.081264711916446686" blue="0.33935263752937317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lgd-5J-gIw" firstAttribute="width" secondItem="eJp-6L-ePD" secondAttribute="width" id="FRc-1q-kaK"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HdF-rp-7EG">
+                                <rect key="frame" x="20" y="138" width="683" height="135.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2ZD-Bu-pNh">
+                                        <rect key="frame" x="0.0" y="0.0" width="341.5" height="135.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="GENDER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5L-nS-ihR">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="44y-Wp-KXf">
+                                                <rect key="frame" x="0.0" y="40" width="140" height="95.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="72r-0M-G58" userLabel="Stack ViewFemale">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="95.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-cS-fVw" userLabel="ButtonFeMale">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                                <state key="normal" image="btn_female_normal"/>
+                                                                <state key="selected" image="btn_female_selected"/>
+                                                                <state key="highlighted" image="btn_female_selected"/>
+                                                                <connections>
+                                                                    <action selector="touchUpFemaleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2FU-d4-Go8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD0-d8-xXG">
+                                                                <rect key="frame" x="9.5" y="75" width="55.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="4t0-0X-4dA" userLabel="Stack ViewMale">
+                                                        <rect key="frame" x="75" y="0.0" width="65" height="95.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-DJ-qJ4" userLabel="ButtonMale">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="75"/>
+                                                                <state key="normal" image="btn_male_normal"/>
+                                                                <state key="selected" image="btn_male_selected"/>
+                                                                <connections>
+                                                                    <action selector="touchUpMaleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5JE-ed-0o9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdb-Ur-Gsb">
+                                                                <rect key="frame" x="28" y="75" width="37" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-fE-wz7">
+                                        <rect key="frame" x="341.5" y="0.0" width="341.5" height="135.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARE YOU A SMOKER?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IO-Uc-PjZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hUY-0P-O7a">
+                                                <rect key="frame" x="0.0" y="40" width="170.5" height="95.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ql-eg-Z7F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="95.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-gZ-xBC" userLabel="ButtonSmoker">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                                <state key="normal" image="btn_smoker_normal"/>
+                                                                <state key="selected" image="btn_smoker_selected"/>
+                                                                <connections>
+                                                                    <action selector="touchUpSmokerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2E-zq-Hnr"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-6Y-ATw">
+                                                                <rect key="frame" x="0.0" y="75" width="58.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nGC-cm-yBl">
+                                                        <rect key="frame" x="75" y="0.0" width="95.5" height="95.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-th-EwL" userLabel="ButtonNonSmoker">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                                <state key="normal" image="btn_nonsmoker_normal"/>
+                                                                <state key="selected" image="btn_nonsmoker_selected"/>
+                                                                <connections>
+                                                                    <action selector="touchUpNonSmokerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nAf-4J-uaZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-smoker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qk-MM-W0v">
+                                                                <rect key="frame" x="0.0" y="75" width="95.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RCD-4U-cA1" firstAttribute="top" secondItem="E78-qe-SQb" secondAttribute="bottom" constant="10" id="DQ8-9X-peL"/>
+                            <constraint firstItem="HdF-rp-7EG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="KIv-jd-Eyh"/>
+                            <constraint firstItem="E78-qe-SQb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lzg-WT-kmW"/>
+                            <constraint firstItem="HdF-rp-7EG" firstAttribute="top" secondItem="RCD-4U-cA1" secondAttribute="bottom" constant="20" id="Uay-JH-HdM"/>
+                            <constraint firstAttribute="trailing" secondItem="RCD-4U-cA1" secondAttribute="trailing" constant="20" id="Xll-G5-Fho"/>
+                            <constraint firstAttribute="trailing" secondItem="E78-qe-SQb" secondAttribute="trailing" id="Zth-Ut-B7d"/>
+                            <constraint firstItem="E78-qe-SQb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cwL-lg-78i"/>
+                            <constraint firstItem="RCD-4U-cA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="lem-H3-dFl"/>
+                            <constraint firstItem="HdF-rp-7EG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qmP-OH-uhC"/>
+                            <constraint firstItem="eJp-6L-ePD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/4" id="waT-o2-7AR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" prompt=" " id="bOh-Lh-SGV">
                         <barButtonItem key="leftBarButtonItem" image="icon_back" id="GVq-LA-nbs">
@@ -60,32 +207,27 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="femaleButton" destination="Rg5-cS-fVw" id="X9u-SG-8Eb"/>
+                        <outlet property="maleButton" destination="QV7-DJ-qJ4" id="Z2G-gl-e1L"/>
+                        <outlet property="nonSmokerButton" destination="Re4-th-EwL" id="KyL-FT-Idt"/>
+                        <outlet property="smokerButton" destination="c1Q-gZ-xBC" id="GKB-66-7gt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.34182908545733" y="26.399999999999999"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qB0-1O-WKT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v7r-ha-DXM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9t1-Yp-Djv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.90335708856582642" green="0.3073602020740509" blue="0.34902274608612061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4t3-lZ-o9e"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nrH-0g-tyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="25.637181409295355" y="26.399999999999999"/>
+            <point key="canvasLocation" x="816.10541727672035" y="25.78125"/>
         </scene>
     </scenes>
     <resources>
+        <image name="btn_female_normal" width="65" height="65"/>
+        <image name="btn_female_selected" width="65" height="65"/>
+        <image name="btn_male_normal" width="65" height="65"/>
+        <image name="btn_male_selected" width="65" height="65"/>
+        <image name="btn_nonsmoker_normal" width="65" height="65"/>
+        <image name="btn_nonsmoker_selected" width="65" height="65"/>
+        <image name="btn_smoker_normal" width="65" height="65"/>
+        <image name="btn_smoker_selected" width="65" height="65"/>
         <image name="icon_back" width="80" height="80"/>
     </resources>
 </document>
