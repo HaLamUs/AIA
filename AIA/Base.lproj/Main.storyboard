@@ -186,18 +186,70 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfY-cm-bnZ">
+                                <rect key="frame" x="20" y="293.5" width="33" height="30"/>
+                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="65" translatesAutoresizingMaskIntoConstraints="NO" id="f3n-xG-0nB">
+                                <rect key="frame" x="18" y="383.5" width="1330" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="valueChangeUISlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="beB-Nj-43m"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 WEEKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHO-iA-6ji">
+                                <rect key="frame" x="20" y="332" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19797574811040597" green="0.32065944375424421" blue="0.53495796319796951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW MUCH DO YOU WANT TO BE COVERED?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-Bl-4A4">
+                                <rect key="frame" x="20" y="473.5" width="355" height="30"/>
+                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="50" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-BD-hko">
+                                <rect key="frame" x="18" y="558.5" width="1330" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="valueChangeCoveredUISlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ccz-vX-pjD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S$50k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-7N-rLJ">
+                                <rect key="frame" x="20" y="531" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19797574809999999" green="0.3206594438" blue="0.5349579632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AIAEverestBeta-CondensedMedium" family="AIA Everest Beta" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f3n-xG-0nB" secondAttribute="trailing" constant="20" id="9ZE-tr-F0d"/>
+                            <constraint firstItem="BZ0-BD-hko" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BVM-jb-fYg"/>
+                            <constraint firstAttribute="trailing" secondItem="BZ0-BD-hko" secondAttribute="trailing" constant="20" id="CbT-Yw-mbs"/>
                             <constraint firstItem="RCD-4U-cA1" firstAttribute="top" secondItem="E78-qe-SQb" secondAttribute="bottom" constant="10" id="DQ8-9X-peL"/>
                             <constraint firstItem="HdF-rp-7EG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="KIv-jd-Eyh"/>
                             <constraint firstItem="E78-qe-SQb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lzg-WT-kmW"/>
+                            <constraint firstItem="f3n-xG-0nB" firstAttribute="top" secondItem="hfY-cm-bnZ" secondAttribute="bottom" constant="60" id="Owv-Nd-LXP"/>
+                            <constraint firstItem="hfY-cm-bnZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="S5Z-lK-aS2"/>
                             <constraint firstItem="HdF-rp-7EG" firstAttribute="top" secondItem="RCD-4U-cA1" secondAttribute="bottom" constant="20" id="Uay-JH-HdM"/>
+                            <constraint firstItem="ij9-Bl-4A4" firstAttribute="top" secondItem="f3n-xG-0nB" secondAttribute="bottom" constant="60" id="Vao-Ps-R7E"/>
                             <constraint firstAttribute="trailing" secondItem="RCD-4U-cA1" secondAttribute="trailing" constant="20" id="Xll-G5-Fho"/>
                             <constraint firstAttribute="trailing" secondItem="E78-qe-SQb" secondAttribute="trailing" id="Zth-Ut-B7d"/>
+                            <constraint firstItem="f3n-xG-0nB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="beM-fZ-Rmx"/>
                             <constraint firstItem="E78-qe-SQb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cwL-lg-78i"/>
+                            <constraint firstItem="BZ0-BD-hko" firstAttribute="top" secondItem="ij9-Bl-4A4" secondAttribute="bottom" constant="55" id="lSc-Jx-b71"/>
                             <constraint firstItem="RCD-4U-cA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="lem-H3-dFl"/>
+                            <constraint firstItem="hfY-cm-bnZ" firstAttribute="top" secondItem="HdF-rp-7EG" secondAttribute="bottom" constant="20" id="pKH-wV-khd"/>
                             <constraint firstItem="HdF-rp-7EG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qmP-OH-uhC"/>
+                            <constraint firstItem="ij9-Bl-4A4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="quh-6u-wDq"/>
                             <constraint firstItem="eJp-6L-ePD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/4" id="waT-o2-7AR"/>
                         </constraints>
                     </view>
@@ -208,9 +260,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ageSlider" destination="f3n-xG-0nB" id="ita-C0-MlA"/>
+                        <outlet property="coveredLabel" destination="UDc-7N-rLJ" id="DOn-zX-JN4"/>
+                        <outlet property="coveredSlider" destination="BZ0-BD-hko" id="QX9-bA-eVf"/>
                         <outlet property="femaleButton" destination="Rg5-cS-fVw" id="X9u-SG-8Eb"/>
                         <outlet property="maleButton" destination="QV7-DJ-qJ4" id="Z2G-gl-e1L"/>
                         <outlet property="nonSmokerButton" destination="Re4-th-EwL" id="KyL-FT-Idt"/>
+                        <outlet property="sliderLabel" destination="xHO-iA-6ji" id="u9x-5H-hP4"/>
                         <outlet property="smokerButton" destination="c1Q-gZ-xBC" id="GKB-66-7gt"/>
                     </connections>
                 </viewController>
