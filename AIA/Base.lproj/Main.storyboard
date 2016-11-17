@@ -58,6 +58,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchUpClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cg-QT-uNr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-5J-gIw">
                                         <rect key="frame" x="999" y="0.0" width="342" height="33"/>
@@ -145,7 +148,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ql-eg-Z7F">
                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="95.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-gZ-xBC" userLabel="ButtonSmoker">
+                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-gZ-xBC" userLabel="ButtonSmoker">
                                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                 <state key="normal" image="btn_smoker_normal"/>
                                                                 <state key="selected" image="btn_smoker_selected"/>
@@ -164,7 +167,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nGC-cm-yBl">
                                                         <rect key="frame" x="75" y="0.0" width="95.5" height="95.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-th-EwL" userLabel="ButtonNonSmoker">
+                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-th-EwL" userLabel="ButtonNonSmoker">
                                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                 <state key="normal" image="btn_nonsmoker_normal"/>
                                                                 <state key="selected" image="btn_nonsmoker_selected"/>

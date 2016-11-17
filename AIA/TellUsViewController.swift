@@ -43,10 +43,14 @@ class TellUsViewController: UIViewController {
     @IBAction func touchUpFemaleButton(_ femaleButton: UIButton) {
         femaleButton.isSelected = !femaleButton.isSelected
         self.maleButton.isSelected = false
+        self.smokerButton.isEnabled = true
+        self.nonSmokerButton.isEnabled = true
     }
     @IBAction func touchUpMaleButton(_ maleButton: UIButton) {
         maleButton.isSelected = !maleButton.isSelected
         self.femaleButton.isSelected = false
+        self.smokerButton.isEnabled = true
+        self.nonSmokerButton.isEnabled = true
     }
     
     @IBAction func touchUpSmokerButton(_ smokerButton: UIButton) {
@@ -59,33 +63,47 @@ class TellUsViewController: UIViewController {
     }
     
     @IBAction func valueChangeUISlider(_ ageSlider: UISlider) {
-        let tam:Int = Int(ageSlider.value)
-        let trackRect = self.ageSlider.trackRect(forBounds: self.ageSlider.bounds)
-        let thumbRect = self.ageSlider.thumbRect(forBounds: self.ageSlider.bounds,
-                                                 trackRect: trackRect, value: ageSlider.value)
-        self.sliderLabel.center = CGPoint(x: thumbRect.origin.x + self.ageSlider.frame.origin.x + 10,
-                                          y: self.ageSlider.frame.origin.y - 20)
-        self.sliderLabel.text = "\(tam) YEARS"
+        let tam: Int = Int(ageSlider.value)
+        self.ageSlider.setPosLabel(label: self.sliderLabel, text: "S$%d YEARS")
         if tam == 1 {
             self.sliderLabel.text = "2 WEEKS"
         }
-//        print("\(ageSlider.value) === \(tam)")
+//        print(self.sliderLabel.center)
     }
     
     @IBAction func valueChangeCoveredUISlider(_ coveredSlider: UISlider) {
-        let tam:Int = Int(coveredSlider.value)
-        let trackRect = self.coveredSlider.trackRect(forBounds: self.coveredSlider.bounds)
-        let thumbRect = self.coveredSlider.thumbRect(forBounds: self.coveredSlider.bounds,
-                                                 trackRect: trackRect, value: coveredSlider.value)
-        self.coveredLabel.center = CGPoint(x: thumbRect.origin.x + self.coveredSlider.frame.origin.x + 10,
-                                          y: self.coveredSlider.frame.origin.y - 20)
-        self.coveredLabel.text = "S$\(tam)k"
+        self.coveredSlider.setPosLabel(label: self.coveredLabel, text: "S$%dk")
     }
 
+    @IBAction func touchUpClearButton(_ sender: UIButton) {
+        self.femaleButton.isSelected = false
+        self.maleButton.isSelected = false
+        self.smokerButton.isEnabled = false
+        self.nonSmokerButton.isEnabled = false
+        self.ageSlider.value = 0
+        self.coveredSlider.value = 50
+        self.coveredSlider.setPosLabel(label: self.coveredLabel, text: "S$%dk")
+        self.ageSlider.setPosLabel(label: self.sliderLabel, text: "S$%d YEARS")
+        self.sliderLabel.text = "2 WEEKS"
+        self.coveredLabel.text = "S$50k"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+}
+
+extension UISlider {
+    func setPosLabel(label: UILabel, text: String) {
+        let trackRect = self.trackRect(forBounds: self.bounds)
+        let thumbRect = self.thumbRect(forBounds: self.bounds,
+                                         trackRect: trackRect,
+                                         value: self.value)
+        label.center = CGPoint(x: thumbRect.origin.x + self.frame.origin.x + 10,
+                               y: self.frame.origin.y - 20)
+        let tam: Int = Int(self.value)
+        label.text = String(format:text, tam)
+    }
 }
 
 
