@@ -2,7 +2,7 @@
 
 Simple 'Tell Us'
 
-# Required
+## Required
 
 - Swift 3.0.1
 
@@ -14,5 +14,8 @@ Simple 'Tell Us'
 
 - Prefer: iPad mini
 
-Write by: LamHa
+## Author
+
+This repo was developed by [@lamha](https://github.com/HaLamUs). 
+Follow or connect with me on [my LinkedIn](https://www.linkedin.com/in/lamhacs). 
 
